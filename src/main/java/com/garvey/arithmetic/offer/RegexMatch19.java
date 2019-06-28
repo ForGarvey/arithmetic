@@ -11,13 +11,22 @@ package com.garvey.arithmetic.offer;
  */
 public class RegexMatch19 {
 
+    /**
+     * 匹配
+     * @param str       字符串的字节数组
+     * @param pattern   正则的字节数组
+     * @return
+     */
     public boolean match(char[] str, char[] pattern) {
-        int strLength = str.length, patternLength = pattern.length;
+        int strLength = str.length;
+        int patternLength = pattern.length;
+
         boolean[][] dp = new boolean[strLength + 1][patternLength + 1];
 
         dp[0][0] = true;
         for (int i = 1; i <= patternLength; i++) {
             if (pattern[i - 1] == '*') {
+                // 第一位不可能是 *，所以 dp[0][i - 2] 不会报错
                 dp[0][i] = dp[0][i - 2];
             }
         }
@@ -28,11 +37,15 @@ public class RegexMatch19 {
                     dp[i][j] = dp[i - 1][j - 1];
                 } else if (pattern[j - 1] == '*') {
                     if (pattern[j - 2] == str[i - 1] || pattern[j - 2] == '.') {
-                        dp[i][j] |= dp[i][j - 1]; // a* counts as single a
-                        dp[i][j] |= dp[i - 1][j]; // a* counts as multiple a
-                        dp[i][j] |= dp[i][j - 2]; // a* counts as empty
+                        // a* 可能匹配一个a
+                        dp[i][j] |= dp[i][j - 1];
+                        // a* 可能匹配多个a
+                        dp[i][j] |= dp[i - 1][j];
+                        // a* 可能没有a
+                        dp[i][j] |= dp[i][j - 2];
                     } else {
-                        dp[i][j] = dp[i][j - 2];   // a* only counts as empty
+                        // a* 没有a
+                        dp[i][j] = dp[i][j - 2];
                     }
                 }
             }
