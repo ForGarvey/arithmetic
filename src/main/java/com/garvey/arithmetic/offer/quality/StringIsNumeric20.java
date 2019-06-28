@@ -21,7 +21,7 @@ package com.garvey.arithmetic.offer.quality;
  * @Author Garvey
  * @Date 2019/6/28 17:17
  */
-public class StringisNumeric20 {
+public class StringIsNumeric20 {
 
     public boolean isNumeric(char[] str) {
         if (str == null || str.length == 0) {
