@@ -1,4 +1,4 @@
-package com.garvey.arithmetic.offer;
+package com.garvey.arithmetic.offer.basics;
 
 /**
  * @Description 12

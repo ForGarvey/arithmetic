@@ -1,4 +1,6 @@
-package com.garvey.arithmetic.offer;
+package com.garvey.arithmetic.offer.basics;
+
+import com.garvey.arithmetic.offer.ListNode;
 
 import java.util.ArrayList;
 import java.util.Stack;

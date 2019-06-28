@@ -1,4 +1,6 @@
-package com.garvey.arithmetic.offer;
+package com.garvey.arithmetic.offer.quality;
+
+import com.garvey.arithmetic.offer.ListNode;
 
 /**
  * @Description 18.1

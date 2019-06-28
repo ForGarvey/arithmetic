@@ -7,15 +7,15 @@ package com.garvey.arithmetic.offer;
  */
 public class TreeLinkNode {
 
-    int val;
+    public int val;
 
-    TreeLinkNode left = null;
+    public TreeLinkNode left = null;
 
-    TreeLinkNode right = null;
+    public TreeLinkNode right = null;
 
-    TreeLinkNode next = null;
+    public TreeLinkNode next = null;
 
-    TreeLinkNode(int val) {
+    public TreeLinkNode(int val) {
         this.val = val;
     }
 }

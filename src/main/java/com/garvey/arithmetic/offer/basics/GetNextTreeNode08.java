@@ -1,4 +1,6 @@
-package com.garvey.arithmetic.offer;
+package com.garvey.arithmetic.offer.basics;
+
+import com.garvey.arithmetic.offer.TreeLinkNode;
 
 /**
  * @Description 08
