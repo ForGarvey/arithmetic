@@ -20,7 +20,7 @@ import java.util.List;
  */
 public class FindKthToTail22 {
 
-    public ListNode FindKthToTail(ListNode head, int k) {
+    public ListNode findKthToTail(ListNode head, int k) {
         if (head == null || k == 0) {
             return null;
         }
