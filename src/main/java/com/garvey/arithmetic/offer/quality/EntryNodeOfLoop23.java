@@ -38,7 +38,7 @@ public class EntryNodeOfLoop23 {
         // 开始获取环入口节点
         // 先移动node1，次数为环中节点的数目
         ListNode node1 = pHead;
-        for (int i = 0; i < nodesInLoop; ++i) {
+        for (int i = 0; i < nodesInLoop; i++) {
             node1 = node1.next;
         }
 
