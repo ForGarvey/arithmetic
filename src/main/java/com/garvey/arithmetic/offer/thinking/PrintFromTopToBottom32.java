@@ -26,15 +26,17 @@ public class PrintFromTopToBottom32 {
             queue.offer(root);
 
             while (!queue.isEmpty()) {
-                TreeNode node = queue.poll();
+                int cnt = queue.size();
 
-                if (node == null) {
-                    continue;
+                while (cnt-- > 0) {
+                    TreeNode node = queue.poll();
+
+                    if (node != null) {
+                        list.add(node.val);
+                        queue.add(node.left);
+                        queue.add(node.right);
+                    }
                 }
-
-                list.add(node.val);
-                queue.add(node.left);
-                queue.add(node.right);
             }
         }
         return list;
