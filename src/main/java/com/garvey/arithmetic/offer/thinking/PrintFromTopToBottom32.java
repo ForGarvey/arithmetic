@@ -18,7 +18,7 @@ import java.util.Queue;
  */
 public class PrintFromTopToBottom32 {
 
-    public ArrayList<Integer> PrintFromTopToBottom(TreeNode root) {
+    public ArrayList<Integer> printFromTopToBottom(TreeNode root) {
         ArrayList<Integer> list = new ArrayList<>();
 
         if (root != null) {
