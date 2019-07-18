@@ -17,7 +17,7 @@ import com.garvey.arithmetic.offer.RandomListNode;
  * @Author Garvey
  * @Date 2019/7/18 11:49
  */
-public class CopyComplicatedList35 {
+public class CopyComplicatedLinkedList35 {
 
     public RandomListNode clone(RandomListNode pHead) {
         if (pHead == null) {
