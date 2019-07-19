@@ -39,7 +39,7 @@ public class ReConstructBinaryTree07 {
      * @param inL   中序遍历左节点索引
      * @return
      */
-    public TreeNode reConstructBinaryTree(int[] pre, int preL, int preR, int inL) {
+    private TreeNode reConstructBinaryTree(int[] pre, int preL, int preR, int inL) {
         if (preL > preR) {
             return null;
         }
@@ -52,4 +52,12 @@ public class ReConstructBinaryTree07 {
         return root;
     }
 
+
+    public static void main(String[] args) {
+        int[] pre = {1,2,4,3,5,6};
+        int[] in = {4,2,1,5,3,6};
+        ReConstructBinaryTree07 reConstructBinaryTree07 = new ReConstructBinaryTree07();
+        TreeNode node = reConstructBinaryTree07.reConstructBinaryTree(pre, in);
+        System.out.println(node.val);
+    }
 }
