@@ -52,7 +52,6 @@ public class ReConstructBinaryTree07 {
         return root;
     }
 
-
     public static void main(String[] args) {
         int[] pre = {1,2,4,3,5,6};
         int[] in = {4,2,1,5,3,6};
