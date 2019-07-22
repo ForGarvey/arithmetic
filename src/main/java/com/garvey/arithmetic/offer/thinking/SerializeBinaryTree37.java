@@ -5,27 +5,27 @@ import com.garvey.arithmetic.offer.TreeNode;
 /**
  * @Description 37
  * 序列化二叉树：
- *  请实现两个函数，分别用来序列化和反序列化二叉树。
+ *      请实现两个函数，分别用来序列化和反序列化二叉树。
  * @Date 2019/7/20 20:55
  */
 public class SerializeBinaryTree37 {
 
     private String deserializeStr;
 
-    public String Serialize(TreeNode root) {
+    public String serialize(TreeNode root) {
         if (root == null) {
             return "#";
         }
-        return root.val + " " + Serialize(root.left) + " " + Serialize(root.right);
+        return root.val + " " + serialize(root.left) + " " + serialize(root.right);
     }
 
-    public TreeNode Deserialize(String str) {
+    public TreeNode deserialize(String str) {
         deserializeStr = str;
-        return Deserialize();
+        return deserialize();
     }
 
-    private TreeNode Deserialize() {
-        if (deserializeStr.length() == 0) {
+    private TreeNode deserialize() {
+        if (deserializeStr == null || deserializeStr.length() == 0) {
             return null;
         }
         int index = deserializeStr.indexOf(" ");
@@ -36,8 +36,8 @@ public class SerializeBinaryTree37 {
         }
         int val = Integer.valueOf(node);
         TreeNode t = new TreeNode(val);
-        t.left = Deserialize();
-        t.right = Deserialize();
+        t.left = deserialize();
+        t.right = deserialize();
         return t;
     }
 }
