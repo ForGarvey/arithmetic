@@ -3,7 +3,7 @@ package com.garvey.arithmetic.offer.efficiency;
 import java.util.PriorityQueue;
 
 /**
- * @Description 41
+ * @Description 41.1
  *  数据流中的中位数：
  *      如何得到一个数据流中的中位数？
  *      1.如果从数据流中读出奇数个数值，那么中位数就是所有数值排序之后位于中间的数值。
