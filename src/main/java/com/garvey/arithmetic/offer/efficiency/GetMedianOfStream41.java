@@ -29,7 +29,7 @@ public class GetMedianOfStream41 {
     private PriorityQueue<Integer> maxHeap = new PriorityQueue<>((o1, o2) -> o2 - o1);
 
     /**
-     * 最小堆：用于存放右半部分数据（需要获取最小值），默认根据
+     * 最小堆：用于存放右半部分数据（需要获取最小值），默认根据自然顺序升序排列
      */
     private PriorityQueue<Integer> minHeap = new PriorityQueue<>();
 
