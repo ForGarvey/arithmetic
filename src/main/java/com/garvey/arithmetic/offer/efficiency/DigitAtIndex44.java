@@ -22,7 +22,9 @@ public class DigitAtIndex44 {
             return -1;
         }
 
+        // 从1位数开始
         int digits = 1;
+
         while (true) {
             int numbers = countOfIntegers(digits);
             if (index < numbers * digits) {
@@ -55,6 +57,7 @@ public class DigitAtIndex44 {
      */
     private int digitAtIndex(int index, int digits) {
         int num = beginNumber(digits) + index / digits;
+        // 余数越小，位数反而越大
         int indexFromRight = digits - index % digits;
         for (int i = 1; i < indexFromRight; i++) {
             num /= 10;
