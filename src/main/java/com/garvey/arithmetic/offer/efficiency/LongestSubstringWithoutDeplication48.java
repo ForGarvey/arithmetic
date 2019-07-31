@@ -23,25 +23,41 @@ import java.util.Arrays;
 public class LongestSubstringWithoutDeplication48 {
 
     public int longestSubstringWithoutDeplication(String str) {
+
+        if (str == null || str.length() <= 0) {
+            return 0;
+        }
+
         int curLength = 0;
         int maxLength = 0;
 
+        // 元素顺序是26个字母的顺序，元素的值为字母在字符串中上次出现对应的索引值
         int[] position = new int[26];
 
+        // 数组元素的默认值为-1
         Arrays.fill(position, -1);
-        for (int curI = 0; curI < str.length(); curI++) {
-            int c = str.charAt(curI) - 'a';
-            int preI = position[c];
-            if (preI == -1 || curI - preI > curLength) {
-                curLength++;
+
+        for (int i = 0; i < str.length(); i++) {
+            int index = str.charAt(i) - 'a';
+            if (position[index] == -1 || i - position[index] > curLength) {
+                // 说明该字符之前没有出现过 或者 该字符和它上次出现在字符串中的位置的距离大于f(i-1)
+                // 此时f(i)=f(i-1)+1
+                curLength += 1;
             } else {
-                maxLength = Math.max(maxLength, curLength);
-                curLength = curI - preI;
+                // 说明该字符和它上次出现在字符串中的位置的距离小于或者等于f(i-1)，此时f(i)=d
+                curLength = i - position[index];
             }
-            position[c] = curI;
+
+            position[index] = i;
+            maxLength = Math.max(maxLength, curLength);
         }
-        maxLength = Math.max(maxLength, curLength);
+
         return maxLength;
+    }
+
+    public static void main(String[] args) {
+        LongestSubstringWithoutDeplication48 longestSubstringWithoutDeplication48 = new LongestSubstringWithoutDeplication48();
+        System.out.println(longestSubstringWithoutDeplication48.longestSubstringWithoutDeplication("arabcacfr"));
     }
 
 }
