@@ -2,8 +2,6 @@ package com.garvey.arithmetic.offer.efficiency;
 
 import com.garvey.arithmetic.offer.ListNode;
 
-import java.util.Queue;
-
 /**
  * @Description 52
  *  两个链表的第一个公共节点：
