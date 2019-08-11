@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * @Description 61
  *  扑克牌顺子：
- *
+ *      五张牌，其中大小鬼为癞子，牌面为 0。判断这五张牌是否能组成顺子。
  * @Author Garvey
  * @Date 2019-08-09 19:55
  */
