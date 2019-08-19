@@ -30,5 +30,9 @@ public class LastRemaining62 {
     public static void main(String[] args) {
         LastRemaining62 lastRemaining62 = new LastRemaining62();
         System.out.println(lastRemaining62.lastRemaining(5, 3));
+        System.out.println(lastRemaining62.lastRemaining(5, 9));
+        System.out.println(lastRemaining62.lastRemaining(0, 3));
+        System.out.println(lastRemaining62.lastRemaining(0, 0));
+        System.out.println(lastRemaining62.lastRemaining(4000, 997));
     }
 }
