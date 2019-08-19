@@ -1,10 +1,5 @@
 package com.garvey.arithmetic.offer.ability;
 
-import java.util.AbstractMap;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
 /**
  * @Description 60
  *  n个骰子的点数：
