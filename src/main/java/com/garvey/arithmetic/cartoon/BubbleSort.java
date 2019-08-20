@@ -33,10 +33,13 @@ public class BubbleSort {
                     array[j] = array[j + 1];
                     array[j + 1] = temp;
 
-                    // 因为有元素进行交换，所以不是有序的，标记变为false
-                    isSorted = false;
                     // 更新为最后一次交换元素的位置
                     lastExchangeIndex = j;
+
+                    // 因为有元素进行交换，所以不是有序的，标记变为false
+                    if (isSorted) {
+                        isSorted = false;
+                    }
                 }
             }
 
