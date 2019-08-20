@@ -12,6 +12,13 @@ import com.garvey.arithmetic.offer.TreeNode;
  */
 public class LowestCommonAncestor68 {
 
+    /**
+     * 二叉查找树中两个节点的最低公共祖先
+     * @param root
+     * @param p
+     * @param q
+     * @return
+     */
     public TreeNode lowestCommonAncestor1(TreeNode root, TreeNode p, TreeNode q) {
         if (root == null || p == null || q == null) {
             return null;
@@ -26,6 +33,13 @@ public class LowestCommonAncestor68 {
         return root;
     }
 
+    /**
+     * 普通二叉树中两个节点的最低公共祖先
+     * @param root
+     * @param p
+     * @param q
+     * @return
+     */
     public TreeNode lowestCommonAncestor2(TreeNode root, TreeNode p, TreeNode q) {
         if (root == null || p == root || q == root) {
             return root;
