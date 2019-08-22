@@ -6,4 +6,9 @@ package com.garvey.arithmetic.cartoon;
  * @Date 2019-08-21 21:44
  */
 public class QuickSort {
+
+    public void quickSort() {
+
+    }
+
 }
