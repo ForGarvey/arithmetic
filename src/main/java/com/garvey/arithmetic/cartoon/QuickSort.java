@@ -12,8 +12,27 @@ package com.garvey.arithmetic.cartoon;
  */
 public class QuickSort {
 
-    public void quickSort(int[] array) {
+    /**
+     * 双边循环法
+     * @param array
+     */
+    public void quickSortV1(int[] array) {
 
     }
 
+    /**
+     * 单边循环法
+     * @param array
+     */
+    public void quickSortV2(int[] array) {
+
+    }
+
+    /**
+     * 非递归实现
+     * @param array
+     */
+    public void quickSortV3(int[] array) {
+
+    }
 }
