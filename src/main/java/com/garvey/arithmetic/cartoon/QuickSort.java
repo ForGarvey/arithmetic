@@ -16,8 +16,8 @@ public class QuickSort {
      * 双边循环法
      * @param array
      */
-    public void quickSortV1(int[] array) {
-
+    public void quickSortV1(int[] array, int startIndex, int endIndex) {
+        // 递归结束条件：startIndex
     }
 
     /**
