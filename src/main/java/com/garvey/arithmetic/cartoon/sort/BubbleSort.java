@@ -1,4 +1,4 @@
-package com.garvey.arithmetic.cartoon;
+package com.garvey.arithmetic.cartoon.sort;
 
 import java.util.Arrays;
 

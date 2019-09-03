@@ -1,6 +1,5 @@
-package com.garvey.arithmetic.cartoon;
+package com.garvey.arithmetic.cartoon.sort;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 /**
