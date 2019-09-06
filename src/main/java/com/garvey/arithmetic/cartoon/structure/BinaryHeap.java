@@ -18,4 +18,8 @@ package com.garvey.arithmetic.cartoon.structure;
  */
 public class BinaryHeap {
 
+    public static void upAdjust(int[] array) {
+
+    }
+
 }
