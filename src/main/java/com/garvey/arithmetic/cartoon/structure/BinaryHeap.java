@@ -18,6 +18,10 @@ package com.garvey.arithmetic.cartoon.structure;
  */
 public class BinaryHeap {
 
+    /**
+     * "上浮"调整
+     * @param array     待调整的堆
+     */
     public static void upAdjust(int[] array) {
 
     }
