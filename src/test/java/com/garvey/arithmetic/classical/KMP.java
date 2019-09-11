@@ -2,6 +2,9 @@ package com.garvey.arithmetic.classical;
 
 /**
  * @Description KMP算法
+ *      1.解决模式串在文本串是否出现过，以及若是出现时，最早出现的位置的经典算法。
+ *      2.kmp方法算法就利用之前判断过信息，通过一个next数组，保存模式串中前后最长公共子序列的长度，
+ *      每次回溯时，通过next数组找到，前面匹配过的位置，省去了大量的计算时间。
  * @Author Garvey
  * @Date 2019-09-11 23:32
  */
