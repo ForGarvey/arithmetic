@@ -41,15 +41,22 @@ public class SmartSteal {
         }
 
         int[] dp = new int[nums.length];
+        boolean[] stealFirst = new boolean[nums.length];
+
         dp[0] = nums[0];
         dp[1] = Math.max(dp[0], nums[1]);
 
+        stealFirst[0] = true;
+        stealFirst[1] = nums[0] > nums[1];
+
         for (int i = 2; i < nums.length; i++) {
             dp[i] = Math.max(dp[i - 2] + nums[i], dp[i - 1]);
+            stealFirst[i] = dp[i] > dp[i - 1] ? stealFirst[i - 2] : stealFirst[i - 1];
         }
 
-        if (nums[0] > nums[1] ||  (nums[0] + nums[2] > dp[1])) {
-
+        if (stealFirst[nums.length - 1] && dp[nums.length - 1] != dp[nums.length - 2]) {
+            int bigger = Math.max(nums[0], nums[nums.length - 1]);
+            dp[nums.length - 1] = Math.max(dp[nums.length - 1] - nums[0] - nums[nums.length - 1] + bigger, dp[nums.length - 2]);
         }
 
         return dp[nums.length - 1];
