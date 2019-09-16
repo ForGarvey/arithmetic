@@ -41,6 +41,7 @@ public class SmartSteal {
         }
 
         int[] dp = new int[nums.length];
+        // 记录是否偷了第一家店铺
         boolean[] stealFirst = new boolean[nums.length];
 
         dp[0] = nums[0];
@@ -55,6 +56,7 @@ public class SmartSteal {
         }
 
         if (stealFirst[nums.length - 1] && dp[nums.length - 1] != dp[nums.length - 2]) {
+            // 说明偷了第一家店铺和最后一家店铺，需要进行处理
             int bigger = Math.max(nums[0], nums[nums.length - 1]);
             dp[nums.length - 1] = Math.max(dp[nums.length - 1] - nums[0] - nums[nums.length - 1] + bigger, dp[nums.length - 2]);
         }
