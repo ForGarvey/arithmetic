@@ -1,6 +1,5 @@
 package com.garvey.arithmetic.interview;
 
-import java.util.Arrays;
 import java.util.Stack;
 
 /**
@@ -30,7 +29,7 @@ public class MergeTimeInterval {
 //    }
 
 
-    public static int[][] merge(int[][] intervals) {
+    int[][] merge(int[][] intervals) {
         if (intervals == null || intervals.length == 0
                 || intervals[0] == null || intervals[0].length < 2) {
             return null;
@@ -66,13 +65,5 @@ public class MergeTimeInterval {
         return mergeIntervals;
     }
 
-    public static void main(String[] args) {
-        int[][] arr = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
-        int[][] arr1 = {{1, 11}, {2, 6}, {8, 10}, {15, 18}};
-        int[][] arr2 = {{1, 4}, {4, 5}, {8, 10}, {15, 18}};
-        System.out.println(Arrays.deepToString(merge(arr)));
-        System.out.println(Arrays.deepToString(merge(arr1)));
-        System.out.println(Arrays.deepToString(merge(arr2)));
-    }
 
 }
