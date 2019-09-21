@@ -67,5 +67,8 @@ public class SmartSteal {
     public static void main(String[] args) {
         System.out.println(steal(new int[]{2,3,2}));
         System.out.println(steal(new int[]{1,2,3,1}));
+        System.out.println(steal(new int[]{3,2}));
+        System.out.println(steal(new int[]{2,3}));
+        System.out.println(steal(new int[]{2,3,5,7,1}));
     }
 }
