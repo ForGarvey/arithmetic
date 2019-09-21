@@ -13,7 +13,7 @@ public class NumJewelsInStones {
      * 计算你拥有的石头中，有多少宝石
      * @param j     代表石头中宝石的类型
      * @param s     代表你拥有的石头
-     * @return
+     * @return      拥有的宝石数
      */
     public int numJewelsInStones(String j, String s) {
         // 参数校验必不可少，提高程序的健壮性
