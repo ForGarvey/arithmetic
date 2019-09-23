@@ -1,4 +1,4 @@
-package com.garvey.arithmetic.leetcode.medium;
+package com.garvey.arithmetic.leetcode.easy;
 
 /**
  * @Description 搜索插入位置
