@@ -61,8 +61,8 @@ public class RemoveStones {
                     removeIndex = index;
                     hasRemove = true;
                     break;
-                } else if ((value == 0 || (value > xMap.get(stones[index][0]) + yMap.get(stones[index][1])))
-                        && xMap.get(stones[index][0]) > 1 && yMap.get(stones[index][1]) > 1) {
+                } else if (xMap.get(stones[index][0]) > 1 && yMap.get(stones[index][1]) > 1
+                        && (value == 0 || (value > xMap.get(stones[index][0]) + yMap.get(stones[index][1])))) {
                     // 先记录下位置，不能直接break
                     value = xMap.get(stones[index][0]) + yMap.get(stones[index][1]);
                     removeIndex = index;
@@ -72,7 +72,6 @@ public class RemoveStones {
 
             }
             if (hasRemove) {
-                // 有两条坐标有相交的点
                 xMap.put(stones[removeIndex][0], xMap.get(stones[removeIndex][0]) - 1);
                 yMap.put(stones[removeIndex][1], yMap.get(stones[removeIndex][1]) - 1);
                 bitSet.set(removeIndex);
