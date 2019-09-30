@@ -1,4 +1,4 @@
-package com.garvey.arithmetic.leetcode.easy;
+package com.garvey.arithmetic.leetcode.medium;
 
 import java.util.BitSet;
 import java.util.HashMap;
