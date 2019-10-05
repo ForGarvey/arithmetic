@@ -8,6 +8,8 @@ package com.garvey.arithmetic.leetcode.medium;
 public class IsValid {
 
     public boolean isValid(String S) {
-        return false;
+        while (S.length() > 0 && S.contains("abc"))
+            S = S.replace("abc", "");
+        return  S.equals("") ;
     }
 }
