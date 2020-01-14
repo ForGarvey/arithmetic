@@ -13,8 +13,9 @@ package com.garvey.arithmetic.leetcode.medium;
 public class IsValid {
 
     public boolean isValid(String S) {
-        while (S.length() > 0 && S.contains("abc"))
+        while (S.length() > 0 && S.contains("abc")) {
             S = S.replace("abc", "");
+        }
         return  S.equals("") ;
     }
 }
